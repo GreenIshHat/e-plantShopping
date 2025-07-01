@@ -41,10 +41,11 @@ const CartItem = ({ onContinueShopping }) => {
     dispatch(removeItem(item.name));
   };
 
-  // ✅ Calculate total cost for individual item
-  const calculateTotalCost = (item) => {
-    return (parseFloat(item.cost.substring(1)) * item.quantity).toFixed(2);
-  };
+const calculateTotalCost = (item) => {
+  return (parseFloat(item.cost.substring(1)) * item.quantity).toFixed(2);
+};
+
+
 
   return (
     <div className="cart-container">
